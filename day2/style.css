@@ -1,0 +1,59 @@
+td {
+  /*선택자 : td태그, 모든 td태그에 적용합니다.*/
+  border: 1px solid gray;
+  text-align: center;
+}
+table {
+  width: 70%;
+  /* 태그요소의 외부 여백(위,아래,왼쪽,오른쪽)*/
+  margin-right: 5px;
+  margin-left: 30px;
+  border-spacing: 5px; /* 테이블 칸(셀)사이의 간격 설정하기*/
+  border-collapse: collapse; /*테이블 칸(셀) 사이의 간격 없애기*/
+} /*위의 2개 중에 하나 설정해서 사용합니다.*/
+
+th {
+  color: white;
+  background-color: brown;
+}
+td,
+th {
+  /* 태그요소의 내부 여백(위,아래,왼쪽,오른쪽) */
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+caption {
+  /*글꼴크기는 16px기본. 비율: %,em */
+  font-size: 1.2em; /*1.2배*/
+}
+
+/* 선택자를 class 사용합니다. class표시 기호는 .  */
+.name {
+  /*class=:name" 모두를 선택합니다. */
+  color: aqua;
+}
+td.name {
+  /* td태그 class="name"모두를 선택합니다.*/
+  color: chocolate;
+}
+/* 위의 2개 중에 한가지 방법으로만 바꿔가면서 실행해보세요. 
+    caption에 name하고 2개 테스트해보기
+*/
+/*참고 : 이 외에도 여러가지 형식으로 선택자를 사용합니다.*/
+div > p {
+  /* 선택자: div태그의 자식태그p 선택*/
+  color: bule;
+}
+p {
+  color: rgb(248, 248, 248);
+}
+/* 선택자 : tr:nth-child(even) tr태그의 짝수요소 선택*/
+
+/* 추가설명
+color: red, green, blue 3가지 색상을 0~255 사이의 값으로 혼합하여 만듭니다.
+        regb(34,56,78),white : 모두255(#FFFFFF),black:모두 0(#000000)
+    :자주 사용하는 색은 이름이 있습니다.
+    :#oooooo -> oo하나가 16진수값.(0~255)
+table에서 border-spacing:테이블 칸(cell)사이의 간격
+    
+*/
