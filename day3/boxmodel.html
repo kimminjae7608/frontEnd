@@ -35,64 +35,56 @@
     <img src="../images/Flex1.JPG" width="35%" />
     <h2>flexbox(flexible box)의 container box 속성 : 모든 아이템에 동일하게 적용되는 속성</h2>
 
-    <li>
-      <dt>display : flex;</dt>
-      <dd>
-        flexble 레이아웃을 만들기 위해 가장 먼저 설정합니다. 아이템이 가로 방향 배치되며 크기는
-        내용의 너비와 높이만큼 설정됩니다.
-      </dd>
-      <dt>flex-direction : column;</dt>
-      <dd>
-        위에서 배치된 가로방향(기본값 row)을 세로방향으로 바꾸어 줍니다. 이것을 메인 축이라고
-        합니다.
-      </dd>
-      <dt>flex-wrap : wrap;</dt>
-      <dd>
-        컨테이너의 크기가 아이템들을 모두 담을 수 없게 작아졌을 때 줄바꿈을 합니다. 기본값은 nowrap
-        입니다.
-      </dd>
-      <dt>flex-flow : row wrap;</dt>
-      <dd>위의 2개의 속성을 한번에 지정하는 단축 속성입니다.</dd>
-      <dt>justify-content : center;</dt>
-      <dd>
-        메인축으로 정렬되는 방법을 설정합니다. 아이템들을 가운데로 정렬합니다. 기본값은
-        flex-start이고 여러가지 방법을 테스트해보세요.
-      </dd>
-      <dt>align-items : center;</dt>
-      <dd>
-        메인의 반대 축으로 정렬되는 방법입니다. 수직 축으로 가운데 정렬합니다. 기본값은
-        stretch입니다. 기본값외에는 아이템의 박스 크기로 변경됩니다.
-      </dd>
-      <dt>align-content : flex-start;</dt>
-      <dd>
-        flex-wrap : wrap;으로 설정되었을 때 반대 축(수직 축) 정렬방법 입니다. 기본값은
-        stretch입니다.
-      </dd>
-    </li>
+    <dt>display : flex;</dt>
+    <dd>
+      flexble 레이아웃을 만들기 위해 가장 먼저 설정합니다. 아이템이 가로 방향 배치되며 크기는 내용의
+      너비와 높이만큼 설정됩니다.
+    </dd>
+    <dt>flex-direction : column;</dt>
+    <dd>
+      위에서 배치된 가로방향(기본값 row)을 세로방향으로 바꾸어 줍니다. 이것을 메인 축이라고 합니다.
+    </dd>
+    <dt>flex-wrap : wrap;</dt>
+    <dd>
+      컨테이너의 크기가 아이템들을 모두 담을 수 없게 작아졌을 때 줄바꿈을 합니다. 기본값은 nowrap
+      입니다.
+    </dd>
+    <dt>flex-flow : row wrap;</dt>
+    <dd>위의 2개의 속성을 한번에 지정하는 단축 속성입니다.</dd>
+    <dt>justify-content : center;</dt>
+    <dd>
+      메인축으로 정렬되는 방법을 설정합니다. 아이템들을 가운데로 정렬합니다. 기본값은 flex-start이고
+      여러가지 방법을 테스트해보세요.
+    </dd>
+    <dt>align-items : center;</dt>
+    <dd>
+      메인의 반대 축으로 정렬되는 방법입니다. 수직 축으로 가운데 정렬합니다. 기본값은 stretch입니다.
+      기본값외에는 아이템의 박스 크기로 변경됩니다.
+    </dd>
+    <dt>align-content : flex-start;</dt>
+    <dd>
+      flex-wrap : wrap;으로 설정되었을 때 반대 축(수직 축) 정렬방법 입니다. 기본값은 stretch입니다.
+    </dd>
 
     <h2>flexbox(flexible box)의 item box 속성 : 아이템마다 다르게 줄 수 있는 속성</h2>
 
-    <li>
-      <dt>flex-basis : 100px;</dt>
-      <dd>
-        아이템의 기본 크기를 모두 100px로 설정합니다. (방향이 row 일때는 너비, column 일때는
-        높이입니다.) 기본값은 auto이며 이때는 컨텐츠의 크기(컨텐츠의 width값)입니다.
-      </dd>
-      <dt>flex-grow : 1;</dt>
-      <dd>
-        flex-basis에서 설정된 값보다 커지도록 합니다. 기본값은 0으로 컨텐츠의 크기로 고정됩니다.
-        아이템마다 다르게 하여 남은 공간을 다른 크기로 할당할 수 있습니다. 컨텐이너가 커질때 다른
-        크기로 변경되는 것이 확인됩니다.
-      </dd>
-      <dt>flex-shrink : 150px;</dt>
-      <dd>
-        flex-basis보다 작아지도록 설정합니다. 기본값은 1 입니다. 주로 컨테이너가 작아질 때 값을
-        0으로 하여 고정 크기 박스로 만들 때 사용합니다.
-      </dd>
-      <dt>flex</dt>
-      <dd>
-        위의 3가지 속성값을 한 번에 쓸 수 있는 단축 속성입니다. grow,shrink,basis 순서 입니다.
-      </dd>
-    </li>
+    <dt>flex-basis : 100px;</dt>
+    <dd>
+      아이템의 기본 크기를 모두 100px로 설정합니다. (방향이 row 일때는 너비, column 일때는
+      높이입니다.) 기본값은 auto이며 이때는 컨텐츠의 크기(컨텐츠의 width값)입니다.
+    </dd>
+    <dt>flex-grow : 1;</dt>
+    <dd>
+      flex-basis에서 설정된 값보다 커지도록 합니다. 기본값은 0으로 컨텐츠의 크기로 고정됩니다.
+      아이템마다 다르게 하여 남은 공간을 다른 크기로 할당할 수 있습니다. 컨텐이너가 커질때 다른
+      크기로 변경되는 것이 확인됩니다.
+    </dd>
+    <dt>flex-shrink : 150px;</dt>
+    <dd>
+      flex-basis보다 작아지도록 설정합니다. 기본값은 1 입니다. 주로 컨테이너가 작아질 때 값을 0으로
+      하여 고정 크기 박스로 만들 때 사용합니다.
+    </dd>
+    <dt>flex</dt>
+    <dd>위의 3가지 속성값을 한 번에 쓸 수 있는 단축 속성입니다. grow,shrink,basis 순서 입니다.</dd>
   </body>
 </html>
