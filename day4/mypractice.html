@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>mypractice1</title>
+    <script>
+      function myFunction() {
+        document.getElementById("demo3").innerHTML = "test3";
+      }
+    </script>
+  </head>
+  <body>
+    <!-- test2 -->
+    <h2>JavaScript in body</h2>
+    <p id="demo2"></p>
+    <script>
+      document.getElementById("demo2").innerHTML = "my first javascript";
+    </script>
+    <!-- test3 -->
+    <p id="demo3">String</p>
+    <button type="button" onclick="myFunction()">sample</button>
+
+    <p id="demo4">myFunction2()</p>
+
+    <script>
+      function myFunction2() {
+        document.getElementById("demo4").innerHTML = "test4";
+      }
+    </script>
+  </body>
+</html>
