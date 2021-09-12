@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>form 형태</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap");
+      * {
+        font-family: "Noto Serif KR", serif;
+      }
+
+      td {
+        border: 1px solid rgb(159, 255, 115);
+      }
+
+      h3 {
+        text-align: center;
+      }
+
+      /* 속성을 이용한 선택자 */
+      input,
+      select {
+        padding: 4px;
+        border-radius: 5px;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        cursor: pointer;
+        border: none;
+      }
+
+      input[type="submit"]:hover,
+      input[type="reset"]:hover {
+        background-color: red;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        width: 70%;
+      }
+      input[type="number"] {
+        width: 15%;
+      }
+
+      td:nth-child(1) {
+        text-align: center;
+        font-weight: bold;
+        color: rgb(21, 189, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div style="width: 60%; margin: auto">
+      <form action="">
+        <table>
+          <caption>
+            회원가입
+          </caption>
+          <tr>
+            <td>이름</td>
+            <td><input type="text" name="name" /></td>
+          </tr>
+          <tr>
+            <td>패스워드</td>
+            <td><input type="password" name="password" /></td>
+          </tr>
+          <tr>
+            <td>이메일</td>
+            <td><input type="email" name="email" /></td>
+          </tr>
+          <tr>
+            <td>나이</td>
+            <td><input type="number" name="age" /></td>
+          </tr>
+          <tr>
+            <td>주소</td>
+            <td>
+              <select name="address" id="">
+                <option value="서울"></option>
+                <option value="인천"></option>
+                <option value="대전"></option>
+                <option value="광주"></option>
+                <option value="부산"></option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>성별</td>
+            <td>
+              <input type="radio" name="gender" value="male" id="male" />
+              <label for="male">남자</label>
+              <input type="radio" value="fmale" name="gender" id="fmale" />
+              <label for="fmale">여자</label>
+            </td>
+          </tr>
+          <tr>
+            <td>취미</td>
+            <td>
+              <input type="checkbox" name="hobby" value="축구" id="football" />
+              <label for="football">축구</label>
+              <input type="checkbox" name="hobby" value="농구" id="basketball" />
+              <label for="basketball">농구</label>
+              <input type="checkbox" name="hobby" value="스키" id="ski" />
+              <label for="ski">스키</label>
+              <input type="checkbox" name="hobby" value="달리기" id="running" />
+              <label for="running">달리기</label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="가입하기" />
+              <input type="reset" value="다시쓰기" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

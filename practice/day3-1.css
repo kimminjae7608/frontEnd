@@ -1,0 +1,41 @@
+a {
+  text-decoration: none; /* a태그 밑줄 지우기 */
+  color: white;
+}
+
+.container > li {
+  list-style: none;
+  font-size: 1.5em;
+  padding: 8px 12px;
+  margin: 8px 12px;
+}
+.container {
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  padding: 12px 15px;
+}
+/* 마우스 li태그에 가져다 놓았을때 생기는 이벤트 */
+.container > li:hover {
+  background-color: brown;
+  border-radius: 6px;
+}
+
+html,
+body {
+  height: 100%;
+}
+.map_wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.footer {
+  border-top: 3px solid tomato;
+  font-size: 0.8 em;
+}
+.footer a,
+p {
+  font-size: 12px; /* 부모 태그인 footer태그의 font-size를 지정해야 em을 사용할 수 있습니다. */
+  color: brown;
+}
