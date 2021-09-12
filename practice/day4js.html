@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>day4 복습</title>
+    <script>
+      document.write("<h2>javascript</h2>");
+      document.write("자바스크립트 복습시간");
+    </script>
+  </head>
+  <body>
+    <hr />
+    <h2>welcome!! 환영해요</h2>
+    <script>
+      document.write("my name is 김민재");
+      alert("js 다이얼로그 입니다.");
+    </script>
+    <button onclick="alert('다이얼로그 창을 띄울수 있다.')">클릭</button>
+    <button onclick="myinfo()">정보1</button>
+    <button onclick="myinfo2()">정보2</button>
+
+    <script>
+      function myinfo() {
+        var myanimal;
+        console.log(myanimal);
+        myanimal = prompt("동물이름을 입력하세요");
+        console.log(myanimal);
+        document.getElementById("animal").innerHTML = myanimal;
+      }
+      function myinfo2() {
+        var age;
+        age = prompt("나이를 입력하세요.");
+        document.getElementById("age").innerHTML = age;
+      }
+    </script>
+    <p>입력하신 나이는 <span id="age"></span>입니다.</p>
+    <p>반려동물 이름은<span id="animal">?</span>입니다.</p>
+  </body>
+</html>
