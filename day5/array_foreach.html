@@ -10,14 +10,14 @@
                                 foreach() 메소드는 for문을 대신합니다. 인자로 함수를 전달합니다.
         *if,for,while 문을 지양하는 프로그래밍 언어
     -->
-    <style>
+    <!-- <style>
       li {
         list-style: none;
         font-size: 1.5em;
         padding: 8px 12px;
         margin: 8px 12px;
       }
-    </style>
+    </style> -->
     <p id="demo">122</p>
     <p id="demo_each"></p>
     <p id="filter"></p>
@@ -26,6 +26,15 @@
       const list = ["sana", "mina", "nana", "nayeon"];
 
       for (let i = 0; i < list.length; i++) console.log(list[i]);
+
+      //배열과 단순 for문으로 li태그목록 생성하는 예제
+      const fruits = ["Banana", "Orange", "Apple", "Mango"]; //배열
+      let fLen = fruits.length; //배열 요소의 개수
+
+      let text = "<ul>"; //문자열 변수 text 초기화
+      for (let i = 0; i < fLen; i++) text += "<li>" + fruits[i] + "</li>"; //text에 문자열을 연결
+      text += "</ul>"; //ul종료 태그 연결
+      document.getElementById("demo").innerHTML = text;
 
       let result = "<ul>";
       list.forEach(function (value, index, array) {
@@ -52,15 +61,6 @@
       //   const over10 = numbers.filter(myFunction1);
       const over10 = [45, 4, 9, 16, 25].filter((value) => value > 10);
       document.getElementById("filter10").innerHTML = over10;
-
-      //배열과 단순 for문으로 li태그목록 생성하는 예제
-      const fruits = ["Banana", "Orange", "Apple", "Mango"]; //배열
-      let fLen = fruits.length; //배열 요소의 개수
-
-      text = "<ul>"; //문자열 변수 text 초기화
-      for (let i = 0; i < fLen; i++) text += "<li>" + fruits[i] + "</li>"; //text에 문자열을 연결
-      text += "</ul>"; //ul종료 태그 연결
-      document.getElementById("demo").innerHTML = text;
     </script>
   </body>
 </html>
