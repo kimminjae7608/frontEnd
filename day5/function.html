@@ -34,9 +34,9 @@
       //Function 함수를 사용하기도 합니다. -> 권장 안함.
       //화살표(arrow) 함수 : 많이 쓰이는 형태입니다.
 
-      /*const myfunc3 = function (x) {
+      /*const myfunc3 = function (x, y) {
           console.log("myfunc3 입니다.");
-          return x * 13;
+          return x * 13 + y;
         }; */
       const myfunc3 = (x, y) => x * 13 + y; //인자를 받아서 리턴값 전달할 때 사용. 실행할 명령이 여러개일때는{}, return 생략 못함.
       console.log(myfunc3(10, 5));

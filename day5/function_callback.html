@@ -32,11 +32,14 @@
 
       //자바스크립트 객체지향 + 함수형 프로그래밍을 합니다.
 
-      function console_star() {
+      // function console_star() {
+      //   console.log("*");
+      // }
+      // setInterval(console_star, 5000); //함수 이름으로 인자 전달합니다.
+      // 35~38번줄 합칠수 있다.
+      setInterval(function () {
         console.log("*");
-      }
-
-      setInterval(console_star, 5000); //함수 이름으로 인자 전달합니다.
+      }, 5000);
     </script>
   </body>
 </html>
