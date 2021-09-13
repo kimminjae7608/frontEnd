@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="result"></ul>
+
+    <p id="test"></p>
+    <!-- 자바스크립트의 템플릿 문자열 : 기호는 ` ` 를 사용합니다.
+        (1) 코드와 콘솔에서 multi line (2) 표현식 ${표현식}를 사용하여 변수값 포함 -> 표현식이 될수 있는것 : 변수, 수식  -->
+    <script>
+      console.log("4. 템플릿 문자열 테스트------------");
+      // const str ="I
+      // like
+      // java script";  //사용할 수 없음.
+      const str = `I
+        like
+        java script`; //multi line 문자열
+      //   document.write(str);   //적용 안됨.
+      document.getElementById("result").innerHTML = str;
+      console.log(str);
+      console.log(`i
+      am
+      java`);
+      const fruit = "Lemon"; //변수
+      const result = `<li>Apple</li>
+        <li>${fruit}</li>
+        <li>Mango</li>`;
+      const $result = "<li>Apple</li><li>${fruit}</li><li>Mango</li>";
+      const $result1 = "<li>Apple</li><li>" + fruit + "</li><li>Mango</li>";
+      document.getElementById("result").innerHTML = result;
+      document.getElementById("result").innerHTML = $result; //태그 요소 렌더링은 가능. 표현식 값 출력은 불가능
+      //   document.getElementById("result").innerHTML = $result1;
+    </script>
+  </body>
+</html>

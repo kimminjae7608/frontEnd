@@ -12,7 +12,7 @@ result = text.replace("Javascript", "jsp"); //대소문자구분해서 일치하
 document.write("문자열 추출 : " + result);
 document.write("<br>");
 
-let x = "John"; //string 타입
+let x = "John"; //string 타입 리터럴 'John'
 let y = new String("John"); //객체 생성
 let z = new String("John"); //
 document.write(typeof x);
@@ -35,6 +35,6 @@ document.write("y,z 일치 비교 : " + (z === y) + "<br>"); //                 
 
 //문자열 객체를 값으로 비교 : valueOf() 메소드로 문자열 자체로만 비교합니다.
 document.write(y.valueOf() == z.valueOf());
-document.write("<br>"); //true
+document.write("<br>"); //***true
 document.write(y.valueOf() === z.valueOf());
 document.write("<br>"); //true

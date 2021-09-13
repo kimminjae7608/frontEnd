@@ -1,0 +1,21 @@
+dl태그 : 설명 리스트
+    ㄴdl태그 다음으로 
+        ㄴdt태그 : 주제 입력
+        ㄴdd태그 : 주제에 관련된 내용 입력
+
+테이블 생성 : table태그
+    ㄴ caption태그 : 테이블 주제
+    ㄴ tr 태그 : row 1개 생성후
+        ㄴ td 태그로 col 추가 -> 첫줄은 td 대신에 th태그 사용할수 있음.
+
+iframe태그 (inline frame) : 현재 문서에 다른 html문서를 포합시킨다.
+    ㄴ src에 포함시킬 문서를 지정합니다. : url(파일, 도메인네임, 주소 url...)
+
+a태그에서 iframe문서 설정하기
+
+    <p>
+      <a href="table_span.html" target="menu1">다른 예제 보기</a>
+      <iframe src="" frameborder="0" name="menu1" ></iframe>
+    </p>
+      링크 설정:페이지 이동, target속성으로 보여질 곳 설정 
+      
