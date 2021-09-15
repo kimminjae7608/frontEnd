@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>day6-4</title>
+  </head>
+  <body>
+    <button onclick="newchild()">좋은말로할때 리스트내놔</button>
+    <div id="main">
+      <h4>오늘의 주제</h4>
+      <ul>
+        <li class="item item01 twice">트와이스</li>
+        <!-- item item01 twice 3가지 스타일 적용 -->
+        <li>소녀시대</li>
+        <li>원더걸스</li>
+      </ul>
+      <ul>
+        <li>사나</li>
+        <li>나연</li>
+        <li>다현</li>
+        <li>미나</li>
+      </ul>
+    </div>
+
+    <script>
+      const $main = document.getElementById("main"); //div 태그를 기준으로 아래 내용을 확인합니다. 줄바꿈 문자도 #text 자식노드
+      console.log($main.childNodes); //#text줄바꿈 문자를 포함
+      console.log($main.children);
+      console.log($main.firstChild); //#text줄바꿈 문자를 포함
+      console.log($main.firstElementChild);
+      console.log($main.lastElementChild);
+      console.log($main.childElementCount); //3
+
+      const $child = $main.firstElementChild;
+      console.log($child.innerHTML);
+      console.log($child.nextElementSibling); //뒤에 나오는 형제 찾기
+      console.log($child.nextElementSibling.innerHTML); //형제 요소의 텍스트 가져오기
+
+      function newchild() {
+        /* 자식 노드 추가 */
+        const $new = `
+      <li>smartTV</li>
+      <li>오디오</li>
+      <li>Ipad</li>
+      <li>갤럭시</li>
+        `;
+
+        const $ul = document.createElement("ul"); //새로운 요소 생성합니다. -ul태그
+        $ul.innerHTML = $new;
+        $main.appendChild($ul);
+        //생성된 요소의 css스타일을 적용하는 방법.
+        $ul.className = "item";
+        $ul.classList.add("item01");
+      }
+    </script>
+  </body>
+</html>

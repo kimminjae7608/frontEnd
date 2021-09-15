@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>day6-1</title>
+  </head>
+  <body>
+    <!-- 자바스크립트의 객체 : 객체 리터럴 { } 사용해서 선언합니다.(new 연산과 함수를 이용해 사용도 가능합니다.)-->
+    <script>
+      /* 프로퍼티란 ? 객체의 특성을 나타내는 key/value 한쌍으로 만들어지는 값.
+                객체 식별자 변수는 const 로 선언. 프로퍼티 값은 재할당이 가능합니다.
+                (객체 저장된 메모리에서 프로퍼티 변경 가능. const는 객체 자체의 메모리 위치는 변경 불가.) */
+      const counter = {
+        //객체 리터럴 선언(일반적인 자바의 객체 : 필드(프로퍼티)와 메소드)
+        num: 0, //프로퍼티 key: num, increasa   프로퍼티 value : num은 0, increase는 함수
+        increase: function () {
+          //프로퍼티 값이 함수일때 메소드라고 합니다.
+          this.num++; //this 키워드로 현재 객체를 가리킨다.
+        }, //프로퍼티 이름을 key라고 부르는데 식별자(이름 규칙 동일.)
+      }; //counter 식별자는 객체(인스턴스)를 참조(자바처럼 클래스를 정의없이 객체를 생성.)
+
+      //*참고 : 자바처럼 new 연산으로 객체생성하기 위해 클래스대신에 함수를 사용합니다.(우리 진도에서는 pass)
+      console.log("1.counter 객체확인 ----------------------------------------------");
+      console.log(counter);
+      console.log(counter.num);
+      counter.mode = "static"; //counter 객체에 mode 프로펕티값을 'static'으로 하여라.// 없는 프로퍼티 동적 생성
+      console.log(counter); //mode 프로퍼티 확인 : 있다? or 없다? 있다
+      counter.increase(); //counter 객체의 메소드 실행.
+      console.log(counter.num); //num값 확인. //1
+      console.log(counter["mode"]); //counter.mode와 동일합니다. **프로퍼티 이름을 ''안에 씁니다.
+
+      console.log("2.person 객체 생성해봅니다. ---------------------------");
+      /* 이름 : 'sana',나이 : 27, say메소드 동작 : alert으로 자기소개(나는 사나입니다.) */
+      //   const person={};  //{};만으로도 빈객체가 생성됩니다.
+      const person = {
+        name: "sana",
+        age: 27,
+        say: function () {
+          alert("나는" + this.name + "입니다.");
+        },
+      };
+      console.log(person);
+      person.say();
+      person["name"] = "나연";
+      person.say(); //person객체의 say메소드 실행
+      //*참고 : 자바스크립트 객체 JSON 이라고 불리면서 비동기 통신에 데이터 전송 방식으로 사용되고 있습니다.
+
+      //객체 리터럴에서 동적으로 프로퍼티키를 만들 수 있습니다.
+      const prefix = "prop";
+      let i = 0;
+      const obj = {
+        //객체 식별자 obj
+        [`${prefix}-${++i}`]: i, //프로퍼티 key와 value에 변수 사용
+        [`${prefix}-${++i}`]: i,
+        [`${prefix}-${++i}`]: i,
+      };
+      console.log(obj);
+    </script>
+  </body>
+</html>
