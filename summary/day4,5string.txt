@@ -1,0 +1,13 @@
+문자열 메소드
+
+변수.length : 문자열길이
+    .indexOf(word) : word 위치 찿기
+    .lastIndexOf(word) : word가 많을 시 마지막 위치 찾기
+    .substring(f_num , l_num) : f_num번째 부터 l_num-1 번째까지 문자열 출력
+    .replace(word1 , word2) : word1의 단어를 word2 단어로 출력
+
+typeof() : 객체 타입확인
+x,y 동등 비교 : (x==y) -> 타입은 다르지만 문자열이 같으면 true
+x,y 일치 비교 : (x===y) -> 타입과 문자열이 둘다 같으면 true
+변수.valueOf() : 문자열 객체를 값으로 비교 이 메소드를 이용하여 문자열 자체만 비교한다.
+
