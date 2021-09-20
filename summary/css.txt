@@ -1,0 +1,37 @@
+css는 html문서로 되어있는 태그들을 꾸며주는 역할이다.
+    ㄴ css작성시 각 태그를 닫기전 또는 style태그안에 작성한다.
+    ㄴ 태그, class, id으로 해당되는 곳에 css를 적용한다.
+    ㄴ 적용되는 우선순위는 id, class, 태그 순이다.
+    ㄴ ex) .container div     .container>div
+    ㄴ  선택자 공백은 손자들도 포함. > 는 자식만.
+    
+
+style 태그에 적용할 시
+    ㄴ id -> #id명 {}
+    ㄴ class -> .class명 {}    ,   태그 -> 태그명{}
+
+background-color -> 배경색상,    color -> 글자 색상
+
+display : flex ; -> 아이템들은 가로 방향으로 배치되고,
+                    자신이 가진 내용물의 width 만큼만 차지함
+
+border : 크기 선유무 색상; ex) border : 1px solid yellow
+테두리 크기가 1px 노란색 선을 설정함.
+
+padding : 값;  ->  상하좌우 내부 여백 설정
+
+margin : 값;  ->  상하좌우 외부 여백 설정
+
+font-size : 값;  ->  ?em으로 ?배 글자크기 설정
+
+width : 값 ;  ->  너비 설정
+
+text-align -> text 정렬
+
+border-radius : 값 ; -> 모든 모서리를 값만큼 부드럽게 설정
+
+nth-child(2n); : ex) td:nth-child(2n-1)
+특정 태그에게 적용 ex) 홀수개의 td태그에만 sytle 적용
+
+hover : 마우스가 올라갔을 때 css 적용
+
