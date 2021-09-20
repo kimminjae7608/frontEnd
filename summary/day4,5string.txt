@@ -5,9 +5,18 @@
     .lastIndexOf(word) : word가 많을 시 마지막 위치 찾기
     .substring(f_num , l_num) : f_num번째 부터 l_num-1 번째까지 문자열 출력
     .replace(word1 , word2) : word1의 단어를 word2 단어로 출력
-
+    .toUpperCase(); : 모두 대문자로 변경
+    
 typeof() : 객체 타입확인
 x,y 동등 비교 : (x==y) -> 타입은 다르지만 문자열이 같으면 true
 x,y 일치 비교 : (x===y) -> 타입과 문자열이 둘다 같으면 true
 변수.valueOf() : 문자열 객체를 값으로 비교 이 메소드를 이용하여 문자열 자체만 비교한다.
 
+변수.slice("음수") : 뒤에서 |음수|값부터 마지막문자값 가져옴
+    .slice("음수1 , 음수2") : 뒤에서 |음수1|부터 뒤에서|음수2|-1까지 문자 값 가져옴
+    .substr("음수",num) : 뒤에서|음수|값부터 num개수만큼 값 가져옴
+
+변수.replace 정규식 -> 문자열에서 특정 조합을 검사하기 위한 패턴
+    ㄴ변수.relplace(/정규식/g , word2) 
+    ㄴ변수.relplace(/정규식/i , word2)
+    ㄴ정규식은 /  /안에 작성. g(대소문자 구분), i(대소문자 구분안함) 사용한 replace
