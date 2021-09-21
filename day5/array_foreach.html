@@ -42,6 +42,7 @@
         // result += "<li>" + value + "</li>"; //value 변수 대신 index 변수로 변경해서 실행해보세요.
         // result += "<li>" + list[index] + "</li>";  //위에랑 같은결과
         result += `<li>${index + 1}:${value}</li>`;
+        console.log(array);
       });
       result += "</ul>";
       document.getElementById("demo_each").innerHTML = result;

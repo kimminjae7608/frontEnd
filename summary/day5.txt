@@ -1,0 +1,49 @@
+자바스크립트 
+    ㄴ 템플릿 문자열-> 기호 ` ` (백틱 사용)
+    ㄴ 태그안에 변수의 값을 넣기 -> ${변수명}
+
+자바스트립트 배열 : 1)연속적 공간이 아니다. 
+                   2)타입이 다른 값들을 다룰 수 있다.
+
+배열 타입의 변수는 다른 배열로 지정할 수 없다.
+
+배열 요소 추가, 삭제
+push(), pop() : 배열 요소 추가,삭제. 배열요소 끝에서 동작.
+unshift(), shift() : 배열 요소 추가,삭제. 배열 요소 처음에서 동작.
+splice() : 배열 요소 추가 or 수정 (시작점 ,0 or 2 , 추가할 요소 ~)
+slice() : 배열요소 추출하여 새로운 배열 생성
+sort(),reverse() : 문자열 오름차순, 내림 차순정렬
+                ㄴ js는 숫자를 구분못함. (사전식 정렬)
+
+함수 : 자바스크립트에서 매우 중요. 매개변수 형식이 없음.
+    ㄴ 함수 선언 - 1) 리터럴 형식으로 선언, 호출시 식별자로 호출
+                    const myfunc1 = function (x){ }
+                    
+                   2) 식별자 없을때는 함수이름으로 자동 식별자가 선언됩니다.
+                    function myfunc2(x) {}
+                    
+                   3) 화살표(arrow) 함수 : 많이 사용하는 형식
+                    const myfunc3 = (x) => { }
+                    함수내용이 한줄일 때 {} 중괄호와, return값 생략가능
+
+                    ※ 함수호출한 값을 변수에 지정할 경우 함수를 먼저 선언해야 합니다.
+
+콜백(callback)함수 : 실행동작을 다르게 할 수 있는 방법(유연성이 높아짐)
+함수 클릭 이벤트 - 여러가지 방법
+    ㄴ 1) <button id="btn1" onclick="btn1()"> onclick 속성으로 함수 호출
+        const btn1 = function () { }
+    
+    ㄴ 2) addEventListener(이벤트, 함수) 
+        <button id="btn2">.
+        document.getElementById("btn2").addEventListener("click", function () {
+        console.log("두번째 버튼 클릭했습니다.");
+      });
+        2번에 이벤트리스너에서 두번째 인자는 함수입니다.
+        (콜백함수) 첫번째 인자는 기다리고 있는 이벤트 이름입니다.
+
+setInterval(핸들러 함수, 시간간격(단위ms)) -
+
+foreach  메소드
+    ㄴ변수.forEach(function(value, index, array){ })
+        value == 변수[n], index는 변수의 인덱스, array는 변수의 모든 값
+
