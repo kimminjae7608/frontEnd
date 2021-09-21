@@ -43,6 +43,7 @@
       //요소 여러개를 찾아오는 메소드
       const $list = document.getElementsByTagName("li"); //요소 4개 있습니다. -> HTML컬렉션 객체타입을 생성합니다.
       console.log($list);
+      console.log(...$list);
       //배열로 변환이 필요합니다.[...] 기호 스프레드 연산자
       [...$list].forEach(function (item) {
         //배열객체로 foreach : $list 를 구성하는 배열요소가 li 요소 객체 입니다.
